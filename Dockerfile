@@ -24,7 +24,7 @@ RUN apt update -y && apt install -y --no-install-recommends \
 
    mkdir -p /opt/calibre && rm -rf /opt/calibre/* && cd /opt/calibre ;\
 
-  wget -O /tmp/calibre-${CALIBRE_VERSION}-x86_64.txz  https://download.calibre-ebook.com/${CALIBRE_VERSION}/calibre-${CALIBRE_VERSION}-x86_64.txz ;\
+  wget -O --no-check-certificate /tmp/calibre-${CALIBRE_VERSION}-x86_64.txz  https://download.calibre-ebook.com/${CALIBRE_VERSION}/calibre-${CALIBRE_VERSION}-x86_64.txz ;\
 
   tar xvf /tmp/calibre-${CALIBRE_VERSION}-x86_64.txz -C /opt/calibre ;\
 
