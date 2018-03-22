@@ -1,4 +1,4 @@
-FROM golang:alpine
+FROM golang
 MAINTAINER Jermine.hu@qq.com
 ENV APP_HOME /go/src/github.com/JermineHu/DocStack/
 WORKDIR $APP_HOME
