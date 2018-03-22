@@ -25,16 +25,17 @@ DocStack是基于[BookStack](https://github.com/TruthHun/BookStack)开发的，�
 
 ## 如何使用
 
-``
+```
+# get the code from repo
 git clone https://github.com/JermineHu/DocStack.git
 
 cd DocStack
 
+# build dokcer images
 docker build -t jermine/docstack .
 
+# run Docstack by docker
 docker run -d --restart=always -p 8081:8181 -v ~/DocStack/conf:/app/conf  -v ~/DocStack/dictionary:/app/dictionary -v ~/DocStack/logs:/app/logs -v ~/DocStack/store:/app/store -v ~/DocStack/uploads:/app/uploads jermine/docstack
-
-
 ```
 
 ## 赞助我
