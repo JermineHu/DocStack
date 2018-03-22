@@ -7,23 +7,31 @@ but the company's information is still in the hope of being able to control it, 
 
 DocStack is used for knowledge sharing and notes,DocStack is developed on the basis of [BookStack] (https://github.com/TruthHun/BookStack), which is born for document management and knowledge sharing.
 
+### The docker repo：
+
+https://hub.docker.com/r/jermine/docstack/
+
+### The Github repo is：
+https://github.com/JermineHu/DocStack
+
+
 ## RoadMap
 
 ## V0.2 feature
-- [ ] 增加docker-compose解决编排和依赖的问题
-- [ ] 增加注册开关，使其注册功能可配置
-- [ ] 将配置改为环境变量配置，取消配置文件的参与，主要考虑集群部署的方便性
-- [ ] 支持主流平台的分享功能
-- [ ] 支持打赏功能
-- [ ] 支持onlyoffice的文档协作功能，实现在线word、excel、ppt的编辑和预览功能
+- [ ] 增加docker-compose解决编排和依赖的问题;
+- [ ] 增加注册开关，使其注册功能可配置;
+- [ ] 将配置改为环境变量配置，取消配置文件的参与，主要考虑集群部署的方便性;
+- [ ] 支持主流平台的分享功能，让知识传播的更远；
+- [ ] 支持打赏功能，提高大家分享的积极性；
+- [ ] 支持onlyoffice的文档协作功能，实现在线word、excel、ppt的编辑和预览功能;
 
 
 ## V0.1 在BookStack的基础上完善的功能
-- [ X ] 增加dockerfile解决了环境依赖的问题
-- [ X ] 实现了DocStack的docker自动构建功能，只要提交代码编译通过即可生成最新镜像
-- [ X ] 增加了govendor的支持，解决当前go项目中包依赖问题
-- [ X ] 增加了中英文的README文档，让DocStack支持国际化，让全球的开发者都能用DocStack
-- [ X ] 将DocStack的版权改为了宽松的MIT协议
+- [ X ] 增加dockerfile解决了环境依赖的问题;
+- [ X ] 实现了DocStack的docker自动构建功能，只要提交代码编译通过即可生成最新镜像;
+- [ X ] 增加了govendor的支持，解决当前go项目中包依赖问题;
+- [ X ] 增加了中英文的README文档，让DocStack支持国际化，让全球的开发者都能用DocStack;
+- [ X ] 将DocStack的版权改为了宽松的MIT协议;
 
 ## How to use it ?
 
