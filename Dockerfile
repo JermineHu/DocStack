@@ -1,19 +1,9 @@
 FROM golang:alpine
 MAINTAINER Jermine.hu@qq.com
-#RUN apk add --no-cache git go ;\
-#    go get github.com/TruthHun/BookStack ;\
-#    go get github.com/TruthHun/converter ;\
-#    go get github.com/TruthHun/gotil ;\
-#    go get github.com/TruthHun/html2article ;\
-#    go get github.com/TruthHun/html2md ;\
-#    go get github.com/alexcesaro/mail ;\
-#    go get github.com/aliyun/aliyun-oss-go-sdk ;\
-#    go get github.com/astaxie/beego ;\
-#    go get github.com/huichen/sego ;\
-#    go get github.com/kataras/iris 
-#ENV APP_HOME /go/src/github.com/TruthHun/BookStack
-#WORKDIR $APP_HOME
-#RUN go env && go build -v -o BookStack && chmod +x BookStack
+ENV APP_HOME /go/src/github.com/JermineHu/DocStack/
+WORKDIR $APP_HOME
+COPY . $APP_HOME
+RUN go env && go build -v -o BookStack && chmod +x BookStack
 FROM ubuntu
 MAINTAINER Jermine.hu@qq.com
 ENV CALIBRE_VERSION 3.19.0
@@ -26,6 +16,9 @@ RUN apt update -y && apt install -y --no-install-recommends \
     /opt/calibre/calibre_postinstall
 WORKDIR /app
 # Get a file from first floor image
-#COPY --from=0 /go/src/github.com/TruthHun/BookStack/BookStack .
-#COPY --from=0 /go/src/github.com/TruthHun/BookStack/conf conf
-CMD	 ["./BookStack","install"]
+COPY --from=0 /go/src/github.com/JermineHu/DocStack/BookStack .
+COPY --from=0 /go/src/github.com/JermineHu/DocStack/conf conf
+COPY --from=0 /go/src/github.com/JermineHu/DocStack/dictionary dictionary
+COPY --from=0 /go/src/github.com/JermineHu/DocStack/static static
+COPY --from=0 /go/src/github.com/JermineHu/DocStack/views views
+CMD	 ./DocStack install && ./DocStack
