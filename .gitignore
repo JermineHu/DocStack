@@ -28,7 +28,7 @@ _testmain.go
 logs/*
 .DS_Store
 mindoc
-cache/
+./cache
 uploads
 /store
 *.xml
