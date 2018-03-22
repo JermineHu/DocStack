@@ -19,7 +19,8 @@ MAINTAINER Jermine.hu@qq.com
 
 FROM ubuntu
 ENV CALIBRE_VERSION 3.19.0
-RUN apt install ttf-wqy-zenhei fonts-wqy-microhei wget chromium-browser xdg-utils xz-utils ;\
+RUN apt update -y && apt install -y --no-install-recommends \
+    ttf-wqy-zenhei fonts-wqy-microhei wget chromium-browser xdg-utils xz-utils ;\
 
    mkdir -p /opt/calibre && rm -rf /opt/calibre/* && cd /opt/calibre ;\
 
