@@ -37,8 +37,6 @@ docker build -t jermine/docstack .
 docker run -d --restart=always -p 8081:8181 -v ~/DocStack/conf:/app/conf  -v ~/DocStack/dictionary:/app/dictionary -v ~/DocStack/logs:/app/logs -v ~/DocStack/store:/app/store -v ~/DocStack/uploads:/app/uploads jermine/docstack
 
 
-```
-
 ## Donation
 
 ### If it helps you, buy me a cup of coffee :)
