@@ -13,4 +13,5 @@ COPY --from=0 /go/src/github.com/JermineHu/DocStack/conf conf
 COPY --from=0 /go/src/github.com/JermineHu/DocStack/dictionary dictionary
 COPY --from=0 /go/src/github.com/JermineHu/DocStack/static static
 COPY --from=0 /go/src/github.com/JermineHu/DocStack/views views
+COPY --from=0 /go/src/github.com/JermineHu/DocStack/lib /usr/local/go/lib
 CMD	 ./DocStack install && ./DocStack
