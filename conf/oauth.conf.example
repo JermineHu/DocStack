@@ -10,8 +10,8 @@ giteeClientId=
 # 您的ClientSecret
 giteeClientSecret=
 
-# 回调地址，把下面的bookstack.cn的域名换成你的即可
-giteeCallback=http://www.bookstack.cn/login/gitee
+# 回调地址，把下面的DocStack.top的域名换成你的即可
+giteeCallback=http://www.DocStack.top/login/gitee
 
 # 下面这两项不要动
 giteeAccesstoken=https://gitee.com/oauth/token
@@ -28,8 +28,8 @@ githubClientId=
 # 您的ClientSecret
 githubClientSecret=
 
-# 回调地址，把下面的bookstack.cn的域名换成你的即可
-githubCallback=http://www.bookstack.cn/login/github
+# 回调地址，把下面的DocStack.top的域名换成你的即可
+githubCallback=http://www.DocStack.top/login/github
 
 # 下面这两项不要动
 githubAccesstoken=https://github.com/login/oauth/access_token
@@ -46,8 +46,8 @@ qqClientId=
 #ClientSecret，即 APP Key
 qqClientSecret=
 
-# 回调地址，把下面的bookstack.cn的域名换成你的即可
-qqCallback=http://www.bookstack.cn/login/qq
+# 回调地址，把下面的DocStack.top的域名换成你的即可
+qqCallback=http://www.DocStack.top/login/qq
 
 # 下面这三项不要动
 qqAccesstoken=https://graph.qq.com/oauth2.0/token

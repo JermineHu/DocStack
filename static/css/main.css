@@ -606,7 +606,7 @@ textarea{
 
 
 
-/* 以下是Bookstack的修正样式 */
+/* 以下是DocStack的修正样式 */
 .navbar-brand{padding-left: 0px;}
 a{color: #333}
 .mgt-15px{margin-top: 15px;}
@@ -634,41 +634,41 @@ a{color: #333}
 .border{border: 1px solid #efefef;}
 .border-cover-img{box-shadow: 0px 1px 3px rgba(0,0,0,.1);border-radius: 4px;}
 .navbar-brand>img.logo{height: 50px;margin-top: -15px;}
-#bookstack-intro{padding-top: 70px;}
-#bookstack-intro ul,#bookstack-intro li{list-style: none;padding:0px;}
-#bookstack-intro h1{font-size: 22px;line-height: 150%;color: #555;margin-top: 10px;}
-#bookstack-intro .none-listyle li{line-height: 250%;border-bottom: 1px dashed #EFEFEF;}
-#bookstack-intro .col-xs-6 .none-listyle li{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
-#bookstack-intro .none-listyle li:last-child{border-bottom: 0px;}
-#bookstack-intro .bookstack-info .col-sm-9{padding-left: 0px;}
-#bookstack-intro .bookstack-info img{cursor: pointer;}
-#bookstack-intro .bookstack-info span{color: #888888;}
-#bookstack-intro .bookstack-info .btn-group{padding:0px;margin-top: 8px;}
-#bookstack-intro .bookstack-info a span{color: #fff;}
-#bookstack-intro .bookstack-info .btn-block{max-width: 300px;margin-top:15px;}
-#bookstack-intro .bookstack-menu .none-listyle  a{line-height: 250%;padding-left: 15px;display: block;text-overflow: ellipsis;overflow: hidden;white-space: nowrap}
-#bookstack-intro .bookstack-menu .none-listyle  a:hover{background-color: #EFEFEF;}
-#bookstack-intro .comments-form{padding-bottom: 15px;border-bottom: 1px solid #EFEFEF !important;}
-#bookstack-intro .comments-form .fa{font-size: 18px;}
-#bookstack-intro .comments-form .fa-star{color: #ff6600}
-#bookstack-intro .comments-form .cursor-pointer{cursor: pointer;}
-#bookstack-intro .comments-list li{padding: 30px 0px;border-bottom: 1px solid #EFEFEF;}
-#bookstack-intro .comments-list li>.col-xs-12{padding: 0px;}
-#bookstack-intro .comments-list .username{color: #333333;}
-#bookstack-intro .comments-list span{color: #b6b6b6;margin-left: 5px;}
-#bookstack-intro .comments-list img{display: inline-block;height: 50px;width: 50px;}
-#bookstack-intro .comments-list .comments-content{font-size: 13px;color: #999999;text-indent: 2em;line-height: 170%;margin-top:10px;}
-#bookstack-intro .comments-left{padding-left: 0px;}
-#bookstack-intro .comments-right{padding:  0px;}
-#bookstack-intro .comments-right .userinfo{font-size: 16px;position: relative;top:-7px;}
-#bookstack-intro .comments-right .userinfo span{font-size: 14px;color: #999999;}
-#bookstack-intro .comments-content{color: #999999;}
+#DocStack-intro{padding-top: 70px;}
+#DocStack-intro ul,#DocStack-intro li{list-style: none;padding:0px;}
+#DocStack-intro h1{font-size: 22px;line-height: 150%;color: #555;margin-top: 10px;}
+#DocStack-intro .none-listyle li{line-height: 250%;border-bottom: 1px dashed #EFEFEF;}
+#DocStack-intro .col-xs-6 .none-listyle li{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+#DocStack-intro .none-listyle li:last-child{border-bottom: 0px;}
+#DocStack-intro .DocStack-info .col-sm-9{padding-left: 0px;}
+#DocStack-intro .DocStack-info img{cursor: pointer;}
+#DocStack-intro .DocStack-info span{color: #888888;}
+#DocStack-intro .DocStack-info .btn-group{padding:0px;margin-top: 8px;}
+#DocStack-intro .DocStack-info a span{color: #fff;}
+#DocStack-intro .DocStack-info .btn-block{max-width: 300px;margin-top:15px;}
+#DocStack-intro .DocStack-menu .none-listyle  a{line-height: 250%;padding-left: 15px;display: block;text-overflow: ellipsis;overflow: hidden;white-space: nowrap}
+#DocStack-intro .DocStack-menu .none-listyle  a:hover{background-color: #EFEFEF;}
+#DocStack-intro .comments-form{padding-bottom: 15px;border-bottom: 1px solid #EFEFEF !important;}
+#DocStack-intro .comments-form .fa{font-size: 18px;}
+#DocStack-intro .comments-form .fa-star{color: #ff6600}
+#DocStack-intro .comments-form .cursor-pointer{cursor: pointer;}
+#DocStack-intro .comments-list li{padding: 30px 0px;border-bottom: 1px solid #EFEFEF;}
+#DocStack-intro .comments-list li>.col-xs-12{padding: 0px;}
+#DocStack-intro .comments-list .username{color: #333333;}
+#DocStack-intro .comments-list span{color: #b6b6b6;margin-left: 5px;}
+#DocStack-intro .comments-list img{display: inline-block;height: 50px;width: 50px;}
+#DocStack-intro .comments-list .comments-content{font-size: 13px;color: #999999;text-indent: 2em;line-height: 170%;margin-top:10px;}
+#DocStack-intro .comments-left{padding-left: 0px;}
+#DocStack-intro .comments-right{padding:  0px;}
+#DocStack-intro .comments-right .userinfo{font-size: 16px;position: relative;top:-7px;}
+#DocStack-intro .comments-right .userinfo span{font-size: 14px;color: #999999;}
+#DocStack-intro .comments-content{color: #999999;}
 
 
 .friend-links a{margin-right: 8px;}
 .book-title{line-height: 200%;}
 /*星*/
-.bookstack-star{display: inline-block;height: 15px;position: relative;top: 2px;width: 80px;}
+.DocStack-star{display: inline-block;height: 15px;position: relative;top: 2px;width: 80px;}
 .star-1,.star-2,.star-3{background:url(../images/stars.png) no-repeat 0px -150px;}/*0星*/
 .star-4,.star-5,.star-6,.star-7,.star-8{background:url(../images/stars.png) no-repeat 0px -135px;}/*0.5星*/
 .star-9,.star-10,.star-11,.star-12,.star-13{background:url(../images/stars.png) no-repeat 0px -120px;}/*1.0星*/
@@ -681,8 +681,8 @@ a{color: #333}
 .star-44,.star-45,.star-46,.star-47,.star-48{background:url(../images/stars.png) no-repeat 0px -15px;}/*4.5星*/
 .star-49,.star-50{background:url(../images/stars.png) no-repeat 0px 0px;}/*5.0星*/
 
-.bookstack-labels{text-indent: 2em;}
-.bookstack-labels a{margin-right: 10px;}
+.DocStack-labels{text-indent: 2em;}
+.DocStack-labels a{margin-right: 10px;}
 .qrcode-pay{max-width:100%;cursor: pointer;}
 
 

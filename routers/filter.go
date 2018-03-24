@@ -36,7 +36,7 @@ func init() {
 	beego.InsertFilter("/api/*", beego.BeforeRouter, FilterUser)
 
 	var FinishRouter = func(ctx *context.Context) {
-		ctx.ResponseWriter.Header().Add("Application", "BookStack")
+		ctx.ResponseWriter.Header().Add("Application", "DocStack")
 		ctx.ResponseWriter.Header().Add("Version", beego.AppConfig.DefaultString("version", "v1.0.0"))
 	}
 

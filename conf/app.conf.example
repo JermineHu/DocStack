@@ -1,5 +1,5 @@
 # 程序名称
-appname = BookStack
+appname = DocStack
 
 # 程序版本
 version = v1.1
@@ -14,7 +14,7 @@ runmode = dev
 sessionon = true
 
 # session名称，这个你自己定。
-sessionname = bookstack
+sessionname = DocStack
 copyrequestbody = true
 
 # 启动gzip压缩，则设置为true，否则设置为false。建议启动
@@ -25,7 +25,7 @@ StaticExtensionsToGzip = .css, .js, .xml
 
 
 # 默认Session生成Key的秘钥
-beegoserversessionkey=bookstack
+beegoserversessionkey=DocStack
 
 ########Session储存方式##############
 #以文件方式储存
@@ -44,12 +44,12 @@ StaticExt=.txt,.xml,.ico,.png,.jpg,.jpeg,.gif,.html
 #评论时间间隔，每次发表评论，限定间隔秒数，避免被恶意刷评论
 CommentInterval=10
 
-# 生成下载文档时导出pdf文档的配置，这里建议把关于bookstack.cn的信息替换成你自己的就行，其他的建议不要动
+# 生成下载文档时导出pdf文档的配置，这里建议把关于DocStack.top的信息替换成你自己的就行，其他的建议不要动
 exportHeader=<p style='color:#8E8E8E;font-size:12px;'>_SECTION_</p>
-exportFooter=<p style='color:#8E8E8E;font-size:12px;'>本文档使用 <a href='http://www.bookstack.cn' style='text-decoration:none;color:#1abc9c;font-weight:bold;'>书栈(BookStack.CN)</a> 构建 <span style='float:right'>- _PAGENUM_ -</span></p>
+exportFooter=<p style='color:#8E8E8E;font-size:12px;'>本文档使用 <a href='http://www.DocStack.top' style='text-decoration:none;color:#1abc9c;font-weight:bold;'>多克(DocStack.top)</a> 构建 <span style='float:right'>- _PAGENUM_ -</span></p>
 exportFontSize=14
 exportPaperSize=a4
-exportCreator=书栈(BookStack.CN)
+exportCreator=多克(DocStack.top)
 exportMarginLeft=72
 exportMarginRight=72
 exportMarginTop=72
@@ -74,7 +74,7 @@ db_username=
 db_password=
 
 #您使用的数据库
-db_database=bookstack
+db_database=DocStack
 
 
 
@@ -114,7 +114,7 @@ smtp_port=25
 form_user_name=
 
 #接收回件的邮箱。留空则表示使用发送邮件的邮箱作为接收回件邮箱
-reply_user_name=bookstack@qq.com
+reply_user_name=DocStack@qq.com
 
 #邮件有效期30分钟
 mail_expired=30

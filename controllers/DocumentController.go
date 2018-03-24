@@ -806,16 +806,16 @@ func (this *DocumentController) Content() {
 		is_summary := false
 		is_auto := false
 		//替换文档中的url链接
-		if strings.ToLower(doc.Identify) == "summary.md" && (strings.Contains(markdown, "<bookstack-summary></bookstack-summary>") || strings.Contains(doc.Markdown, "<bookstack-summary/>")) {
-			//如果标识是summary.md，并且带有bookstack的标签，则表示更新目录
+		if strings.ToLower(doc.Identify) == "summary.md" && (strings.Contains(markdown, "<DocStack-summary></DocStack-summary>") || strings.Contains(doc.Markdown, "<DocStack-summary/>")) {
+			//如果标识是summary.md，并且带有DocStack的标签，则表示更新目录
 			is_summary = true
 			//要清除，避免每次保存的时候都要重新排序
-			replaces := []string{"<bookstack-summary></bookstack-summary>", "<bookstack-summary/>"}
+			replaces := []string{"<DocStack-summary></DocStack-summary>", "<DocStack-summary/>"}
 			for _, r := range replaces {
 				markdown = strings.Replace(markdown, r, "", -1)
 			}
 		}
-		if strings.Contains(markdown, "<bookstack-auto></bookstack-auto>") || strings.Contains(doc.Markdown, "<bookstack-auto/>") {
+		if strings.Contains(markdown, "<DocStack-auto></DocStack-auto>") || strings.Contains(doc.Markdown, "<DocStack-auto/>") {
 			//自动生成文档内容
 			var docs []models.Document
 			orm.NewOrm().QueryTable("md_documents").Filter("book_id", book_id).Filter("parent_id", doc_id).OrderBy("order_sort").All(&docs, "document_id", "document_name", "identify")
@@ -825,8 +825,8 @@ func (this *DocumentController) Content() {
 				newMd = append(newMd, fmt.Sprintf(`- [%v]($%v)`, idoc.DocumentName, idoc.Identify))
 				newCont = append(newCont, fmt.Sprintf(`<li><a href="$%v">%v</a></li>`, idoc.Identify, idoc.DocumentName))
 			}
-			markdown = strings.Replace(markdown, "<bookstack-auto></bookstack-auto>", strings.Join(newMd, "\n"), -1)
-			content = strings.Replace(content, "<bookstack-auto></bookstack-auto>", "<ul>"+strings.Join(newCont, "")+"</ul>", -1)
+			markdown = strings.Replace(markdown, "<DocStack-auto></DocStack-auto>", strings.Join(newMd, "\n"), -1)
+			content = strings.Replace(content, "<DocStack-auto></DocStack-auto>", "<ul>"+strings.Join(newCont, "")+"</ul>", -1)
 			is_auto = true
 		}
 		content = this.replaceLinks(identify, content, is_summary)

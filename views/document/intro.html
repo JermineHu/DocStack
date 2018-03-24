@@ -3,10 +3,10 @@
 <head>
     {{template "widgets/head.html" .}}
 </head>
-<body id="bookstack-intro">
+<body id="DocStack-intro">
 {{template "widgets/header.html" .}}
 <div class="container">
-    <div class="row bookstack-info">
+    <div class="row DocStack-info">
         <div class="col-xs-12">
             <h1>{{.Book.BookName}}
                  {{if eq $.Member.MemberId $.Book.MemberId}}
@@ -20,8 +20,8 @@
         </div>
         <div class="col-sm-9 col-xs-6">
             <ul class="none-listyle">
-                <li class="bookstack-score"><span>文档评分：</span>
-                    <i class="bookstack-star star-{{.Book.Score}}"></i>
+                <li class="DocStack-score"><span>文档评分：</span>
+                    <i class="DocStack-star star-{{.Book.Score}}"></i>
                     {{.Book.ScoreFloat}}
                     （<span class="text-muted">{{.Book.CntScore}} 个有效评分</span>）
                 </li>
@@ -73,7 +73,7 @@
                 {{if .Book.Label}}
                 <li style="border-bottom: 0px;">
                     <span>文档标签</span>
-                    <div class="bookstack-labels">
+                    <div class="DocStack-labels">
                     {{str2html (tagsToLink .Book.Label)}}
                     </div>
                 </li>
@@ -89,7 +89,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-12 bookstack-menu">
+        <div class="col-xs-12 DocStack-menu">
             <ul class="nav nav-tabs">
                 <li {{if eq .Tab "default"}}class="active"{{end}}><a href="{{urlfor "DocumentController.Index" ":key" $.Book.Identify}}"><span class="hidden-xs">文档</span>目录</a></li>
                 <li {{if eq .Tab "comment"}}class="active"{{end}}><a href="{{urlfor "DocumentController.Index" ":key" $.Book.Identify}}?tab=comment"><span class="hidden-xs">文档</span>评论 (<span class="text-muted">{{$.Book.CntComment}}</span>)</a></li>
@@ -101,7 +101,7 @@
                             <li class="comments-form clearfix">
                                 <div class="score">
                                     {{if gt $.MyScore 0}}
-                                    <span class="text-muted">我的评分: <i class="bookstack-star star-{{$.MyScore}}"></i></span>
+                                    <span class="text-muted">我的评分: <i class="DocStack-star star-{{$.MyScore}}"></i></span>
                                     {{else}}
                                     <span title="点击即可给当前文档打分" class="cursor-pointer" data-url="{{urlfor "BookController.Score" ":id" $.Book.BookId}}" data-toggle="tooltip">
                                         <i class="fa fa-star-o" data-score="1" data-tips="很差"></i>
@@ -131,7 +131,7 @@
                                         <div class="col-xs-12">
                                             <img src="{{showImg .Avatar "avatar"}}" class="img-thumbnail img-circle img-responsive" alt="进击的皇虫">
                                             <span class="username">{{.Nickname}}</span>
-                                            <span>评分:<i class="bookstack-star star-{{.Score}}"></i></span>
+                                            <span>评分:<i class="DocStack-star star-{{.Score}}"></i></span>
                                             <span class="text-muted hidden-xs pull-right">{{date .TimeCreate "Y-m-d H:i:s"}}</span>
                                         </div>
                                         <div class="col-xs-12 comments-content">{{.Content}}</div>
@@ -160,8 +160,8 @@
 <script type="text/javascript" src="/static/js/main.js"></script>
 <script>
 $(function(){
-    $("#bookstack-intro .bookstack-info img").click(function(){
-        location.href=$("#bookstack-intro .bookstack-info .none-listyle .btn-success").attr("href");
+    $("#DocStack-intro .DocStack-info img").click(function(){
+        location.href=$("#DocStack-intro .DocStack-info .none-listyle .btn-success").attr("href");
     })
 })
 </script>

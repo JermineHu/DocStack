@@ -235,7 +235,7 @@ func (this *BaseController) loginByMemberId(memberId int) (err error) {
 	return
 }
 
-//在markdown头部加上<bookstack></bookstack>或者<bookstack/>，即解析markdown中的ul>li>a链接作为目录
+//在markdown头部加上<DocStack></DocStack>或者<DocStack/>，即解析markdown中的ul>li>a链接作为目录
 func (this *BaseController) sortBySummary(htmlstr string, book_id int) {
 	debug := beego.AppConfig.String("runmod") != "prod"
 	o := orm.NewOrm()
@@ -294,13 +294,13 @@ func (this *BaseController) sortBySummary(htmlstr string, book_id int) {
 
 	doc.Find("a").Each(func(i int, selection *goquery.Selection) {
 		doc_name := selection.Text()
-		if docid, exist := selection.Attr("data-bookstack"); exist {
+		if docid, exist := selection.Attr("data-DocStack"); exist {
 			doc_id, _ := strconv.Atoi(docid)
 			eleParent := selection.Parent().Parent().Parent()
 			pid := 0
 			if eleParent.Is("li") {
 				fst := eleParent.Find("a").First()
-				pidstr, _ := fst.Attr("data-bookstack")
+				pidstr, _ := fst.Attr("data-DocStack")
 				//如果这里的pid为0，表示数据库还没存在这个标识，需要创建
 				pid, _ = strconv.Atoi(pidstr)
 			}
@@ -373,13 +373,13 @@ func (this *BaseController) replaceLinks(book_identify string, doc_html string, 
 							if newHref, ok := Links[strings.ToLower(slice[0])]; ok {
 								arr := strings.Split(newHref, "||") //整理的arr数组长度，肯定为2，所以不做数组长度判断
 								selection.SetAttr("href", arr[0]+"#"+strings.Join(slice[1:], "#"))
-								selection.SetAttr("data-bookstack", arr[1])
+								selection.SetAttr("data-DocStack", arr[1])
 							}
 						} else {
 							if newHref, ok := Links[strings.ToLower(href)]; ok {
 								arr := strings.Split(newHref, "||") //整理的arr数组长度，肯定为2，所以不做数组长度判断
 								selection.SetAttr("href", arr[0])
-								selection.SetAttr("data-bookstack", arr[1])
+								selection.SetAttr("data-DocStack", arr[1])
 							}
 						}
 					}

@@ -86,7 +86,7 @@ $(function () {
 
 
     //文档项目评分
-    if($("body").attr("id")=="bookstack-intro"){
+    if($("body").attr("id")=="DocStack-intro"){
         var stars=$(".cursor-pointer .fa")
         $(".cursor-pointer .fa").hover(function () {
             if(!$(this).parent().hasClass("cursor-pointer")) return false;

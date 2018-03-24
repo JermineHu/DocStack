@@ -2,15 +2,15 @@
 <html lang="zh">
 <head>
     <meta charset="utf-8" />
-    <title>BookStack</title>
+    <title>DocStack</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/static/editor.md/css/editormd.preview.css" />
 </head>
 <body>
-    <div id="bookstack-render-data"></div>
-    <div id="bookstack-links"></div>
-    <textarea id="bookstack-data" style="display:none;">{{.Markdown}}</textarea>
+    <div id="DocStack-render-data"></div>
+    <div id="DocStack-links"></div>
+    <textarea id="DocStack-data" style="display:none;">{{.Markdown}}</textarea>
     <script src="/static/jquery/1.12.4/jquery.js"></script>
     <script src="/static/editor.md/lib/marked.min.js"></script>
     <script src="/static/editor.md/lib/prettify.min.js"></script>
@@ -22,16 +22,16 @@
     <script src="/static/editor.md/editormd.js"></script>
 <script type="text/javascript">
     $(function() {
-        editormd.markdownToHTML("bookstack-render-data", {
+        editormd.markdownToHTML("DocStack-render-data", {
            htmlDecode      : "style,script,iframe",  // you can filter tags decode
            emoji           : true,
            taskList        : true,
            tex             : false,  // 默认不解析
            flowChart       : false,  // 默认不解析
            sequenceDiagram : false,  // 默认不解析
-           markdown:$("#bookstack-data").val(),
+           markdown:$("#DocStack-data").val(),
         });
-        $.post(location.href,{content:$("#bookstack-render-data").html()},function (res) {
+        $.post(location.href,{content:$("#DocStack-render-data").html()},function (res) {
             console.log(res);
         });
     });
