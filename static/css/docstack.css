@@ -1150,7 +1150,7 @@ table>tbody>tr:hover{
 }
 
 
-.bookstack-item a{color: #333;margin-left: 8px;}
+.DocStack-item a{color: #333;margin-left: 8px;}
 
 .editormd-preview-container ol.linenums li code, .editormd-html-preview ol.linenums li code{
     line-height: 1.7;
@@ -1174,12 +1174,12 @@ li.L1, li.L3, li.L5, li.L7, li.L9{background-color: transparent;}
 .hung-read-link{margin: 30px 0px 200px;line-height: 200%;}
 .hung-read-link .col-xs-12{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;padding-left: 0px;}
 .hung-read-link .col-xs-12 a{margin-left: 5px;}
-.bookstack-bars{position: fixed;right: 15px;bottom: 30px;border:1px solid rgba(0,0,0,.1);
+.DocStack-bars{position: fixed;right: 15px;bottom: 30px;border:1px solid rgba(0,0,0,.1);
     z-index: 9999;box-shadow: 0px 1px 3px rgba(0,0,0,.1);border-radius: 4px;background-color: #fff;
 }
-.bookstack-bars ul,.bookstack-bars li{list-style: none;padding:0px;margin: 0px;}
-.bookstack-bars li a{display: block;height: 40px;width: 40px;text-align: center;line-height: 40px;color: #666}
-.bookstack-bars li{border-bottom: 1px solid #efefef;}
-.bookstack-bars li:last-child{border-bottom:0px;}
-.bookstack-bars li:hover{background-color: #EFEFEF}
-.bookstack-bars li:hover a{color: #10af88}
+.DocStack-bars ul,.DocStack-bars li{list-style: none;padding:0px;margin: 0px;}
+.DocStack-bars li a{display: block;height: 40px;width: 40px;text-align: center;line-height: 40px;color: #666}
+.DocStack-bars li{border-bottom: 1px solid #efefef;}
+.DocStack-bars li:last-child{border-bottom:0px;}
+.DocStack-bars li:hover{background-color: #EFEFEF}
+.DocStack-bars li:hover a{color: #10af88}
