@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="/static/editor.md/css/editormd.preview.css" />
 </head>
 <body>
-    <div id="DocStack-render-data"></div>
-    <div id="DocStack-links"></div>
-    <textarea id="DocStack-data" style="display:none;">{{.Markdown}}</textarea>
+    <div id="docstack-render-data"></div>
+    <div id="docstack-links"></div>
+    <textarea id="docstack-data" style="display:none;">{{.Markdown}}</textarea>
     <script src="/static/jquery/1.12.4/jquery.js"></script>
     <script src="/static/editor.md/lib/marked.min.js"></script>
     <script src="/static/editor.md/lib/prettify.min.js"></script>
@@ -22,16 +22,16 @@
     <script src="/static/editor.md/editormd.js"></script>
 <script type="text/javascript">
     $(function() {
-        editormd.markdownToHTML("DocStack-render-data", {
+        editormd.markdownToHTML("docstack-render-data", {
            htmlDecode      : "style,script,iframe",  // you can filter tags decode
            emoji           : true,
            taskList        : true,
            tex             : false,  // 默认不解析
            flowChart       : false,  // 默认不解析
            sequenceDiagram : false,  // 默认不解析
-           markdown:$("#DocStack-data").val(),
+           markdown:$("#docstack-data").val(),
         });
-        $.post(location.href,{content:$("#DocStack-render-data").html()},function (res) {
+        $.post(location.href,{content:$("#docstack-render-data").html()},function (res) {
             console.log(res);
         });
     });
