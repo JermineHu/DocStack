@@ -4,6 +4,8 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"os/exec"
+	"fmt"
 )
 
 //本地存储
@@ -29,7 +31,8 @@ func (this *Local) MoveToStore(tmpfile, save string) (err error) {
 	}
 	if strings.ToLower(tmpfile) != strings.ToLower(save) { //不是相同文件路径
 		os.MkdirAll(filepath.Dir(save), os.ModePerm)
-		err = os.Rename(tmpfile, save)
+		//err = os.Rename(tmpfile, save)
+		err=exec.Command("mv", tmpfile, save).Run()
 	}
 	return
 }

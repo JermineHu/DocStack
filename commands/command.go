@@ -199,10 +199,10 @@ func RegisterFunction() {
 }
 
 func ResolveCommand(args []string) {
-	flagSet := flag.NewFlagSet("MinDoc command: ", flag.ExitOnError)
-	flagSet.StringVar(&ConfigurationFile, "config", "", "MinDoc configuration file.")
-	flagSet.StringVar(&WorkingDirectory, "dir", "", "MinDoc working directory.")
-	flagSet.StringVar(&LogFile, "log", "", "MinDoc log file path.")
+	flagSet := flag.NewFlagSet("DocStack command: ", flag.ExitOnError)
+	flagSet.StringVar(&ConfigurationFile, "config", "", "DocStack configuration file.")
+	flagSet.StringVar(&WorkingDirectory, "dir", "", "DocStack working directory.")
+	flagSet.StringVar(&LogFile, "log", "", "DocStack log file path.")
 
 	flagSet.Parse(args)
 

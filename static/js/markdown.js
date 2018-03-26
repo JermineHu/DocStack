@@ -145,11 +145,11 @@ $(function () {
            var cm = window.editor.cm;
            var selection = cm.getSelection();
            if (selection === "") {
-               cm.replaceSelection("<DocStack-summary></DocStack-summary>" + selection);
+               cm.replaceSelection("<docstack-summary></docstack-summary>" + selection);
            }else {
                var selectionText = selection.split("\n");
                for (var i = 0, len = selectionText.length; i < len; i++) {
-                   selectionText[i] = (selectionText[i] === "") ? "" : "<DocStack-summary></DocStack-summary>" + selectionText[i];
+                   selectionText[i] = (selectionText[i] === "") ? "" : "<docstack-summary></docstack-summary>" + selectionText[i];
                }
                cm.replaceSelection(selectionText.join("\n"));
            }
@@ -157,11 +157,11 @@ $(function () {
            var cm = window.editor.cm;
            var selection = cm.getSelection();
            if (selection === "") {
-               cm.replaceSelection("<DocStack-auto></DocStack-auto>" + selection);
+               cm.replaceSelection("<docstack-auto></docstack-auto>" + selection);
            }else {
                var selectionText = selection.split("\n");
                for (var i = 0, len = selectionText.length; i < len; i++) {
-                   selectionText[i] = (selectionText[i] === "") ? "" : "<DocStack-auto></DocStack-auto>" + selectionText[i];
+                   selectionText[i] = (selectionText[i] === "") ? "" : "<docstack-auto></docstack-auto>" + selectionText[i];
                }
                cm.replaceSelection(selectionText.join("\n"));
            }

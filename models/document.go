@@ -370,6 +370,7 @@ func (m *Document) GenerateBook(book *Book, base_url string) {
 	newBook := fmt.Sprintf("projects/%v/books/%v", book.Identify, book.ReleaseTime.Unix())
 	oldBook := fmt.Sprintf("projects/%v/books/%v", book.Identify, book.GenerateTime.Unix())
 	exts := []string{".pdf", ".epub", ".mobi"}
+
 	for _, ext := range exts {
 		switch utils.StoreType {
 		case utils.StoreOss:

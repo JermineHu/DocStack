@@ -379,7 +379,7 @@ func (this *BookController) UploadCover() {
 		}
 	case utils.StoreLocal:
 		save := book.Cover
-		if err := models.ModelStoreLocal.MoveToStore("."+url, save); err != nil {
+		if err := models.ModelStoreLocal.MoveToStore(url, save); err != nil {
 			beego.Error(err.Error())
 		} else {
 			url = book.Cover

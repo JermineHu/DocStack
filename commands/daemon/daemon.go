@@ -19,8 +19,8 @@ type Daemon struct {
 func NewDaemon() *Daemon {
 
 	config := &service.Config{
-		Name:             "mindocd",                               //服务显示名称
-		DisplayName:      "MinDoc service",                        //服务名称
+		Name:             "docstackd",                               //服务显示名称
+		DisplayName:      "DocStack service",                        //服务名称
 		Description:      "A document online management program.", //服务描述
 		WorkingDirectory: commands.WorkingDirectory,
 		Arguments:        os.Args[1:],
@@ -49,7 +49,7 @@ func (d *Daemon) Run() {
 
 	beego.ErrorController(&controllers.ErrorController{})
 
-	fmt.Printf("MinDoc version => %s\nbuild time => %s\nstart directory => %s\n%s\n", conf.VERSION, conf.BUILD_TIME, os.Args[0], conf.GO_VERSION)
+	fmt.Printf("DocStack version => %s\nbuild time => %s\nstart directory => %s\n%s\n", conf.VERSION, conf.BUILD_TIME, os.Args[0], conf.GO_VERSION)
 
 	beego.Run()
 }

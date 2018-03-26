@@ -149,7 +149,9 @@ func (this *Converter) Convert() (err error) {
 					}
 				}
 			}
-			err = errors.New(strings.Join(errs, "\n"))
+			if len(errs)>0 {
+				err = errors.New(strings.Join(errs, "\n"))
+			}
 		} else {
 			err = this.convertToPdf()
 		}

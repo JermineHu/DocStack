@@ -30,7 +30,7 @@
 //         },
 //         success : function (res) {
 //             if(res.errcode === 0){
-//                 console.log("DocStack.top");
+//                 console.log("docstack.top");
 //                 var body = res.data.body;
 //                 var doc_title = res.data.doc_title;
 //                 var title = res.data.title;
@@ -86,7 +86,7 @@ function RenderByMarkdown($content) {
  */
 function loadDocument($url,$id,$callback) {
     $.ajax({
-        url : $url+"?fr=DocStack",
+        url : $url+"?fr=docstack",
         type : "GET",
         beforeSend :function (xhr) {
             var body = events.data('body_' + $id);
@@ -111,7 +111,7 @@ function loadDocument($url,$id,$callback) {
         },
         success : function (res) {
             if(res.errcode === 0){
-                console.log("DocStack");
+                console.log("docstack");
                 var body = res.data.body;
                 var doc_title = res.data.doc_title;
                 var title = res.data.title;

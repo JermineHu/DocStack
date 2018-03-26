@@ -9,6 +9,7 @@ MAINTAINER Jermine.hu@qq.com
 WORKDIR /app
 # Get a file from first floor image
 COPY --from=0 /go/src/github.com/JermineHu/DocStack/DocStack .
+COPY --from=0 /go/src/github.com/JermineHu/DocStack/favicon.ico .
 COPY --from=0 /go/src/github.com/JermineHu/DocStack/conf conf
 COPY --from=0 /go/src/github.com/JermineHu/DocStack/dictionary dictionary
 COPY --from=0 /go/src/github.com/JermineHu/DocStack/static static
