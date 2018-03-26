@@ -5,7 +5,6 @@ import (
 	"path/filepath"
 	"strings"
 	"os/exec"
-	"fmt"
 )
 
 //本地存储
