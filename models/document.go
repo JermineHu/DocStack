@@ -248,6 +248,7 @@ func (m *Document) GenerateBook(book *Book, base_url string) {
 	var ExpCfg = converter.Config{
 		Contributor: beego.AppConfig.String("exportCreator"),
 		Cover:       "",
+		Charset:     "utf8",
 		Creator:     beego.AppConfig.String("exportCreator"),
 		Timestamp:   book.ReleaseTime.Format("2006-01-02"),
 		Description: book.Description,
