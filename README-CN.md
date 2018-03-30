@@ -22,13 +22,12 @@ https://github.com/JermineHu/DocStack
 - [ ] 支持打赏功能，提高大家分享的积极性；
 - [ ] 支持onlyoffice的文档协作功能，实现在线word、excel、ppt的编辑和预览功能;
 
-
 ## V0.1 在BookStack的基础上完善的功能
-- [ X ] 增加dockerfile解决了环境依赖的问题;
-- [ X ] 实现了DocStack的docker自动构建功能，只要提交代码编译通过即可生成最新镜像;
-- [ X ] 增加了govendor的支持，解决当前go项目中包依赖问题;
-- [ X ] 增加了中英文的README文档，让DocStack支持国际化，让全球的开发者都能用DocStack;
-- [ X ] 将DocStack的版权改为了宽松的MIT协议;
+- [x] 增加dockerfile解决了环境依赖的问题;
+- [x] 实现了DocStack的docker自动构建功能，只要提交代码编译通过即可生成最新镜像;
+- [x] 增加了govendor的支持，解决当前go项目中包依赖问题;
+- [x] 增加了中英文的README文档，让DocStack支持国际化，让全球的开发者都能用DocStack;
+- [x] 将DocStack的版权改为了宽松的MIT协议;
 
 ## 如何使用
 
